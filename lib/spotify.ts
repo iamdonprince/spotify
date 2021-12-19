@@ -22,9 +22,9 @@ const params = {
 
 const queryParams = new URLSearchParams(params);
 export const LOGIN_URL =
-  "https://accounts.spotify.com/authorize" + queryParams.toString();
+  "https://accounts.spotify.com/authorize?" + queryParams.toString();
 
-let spotifyApi = new SpotifyWebApi({
+const spotifyApi = new SpotifyWebApi({
   clientId: process.env.SPOTIFY_ID,
   clientSecret: process.env.SPOTIFY_SECRET,
 });
